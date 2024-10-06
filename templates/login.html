@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <h1>مرحبًا بكم في نظام تسجيل الغياب</h1>
+    <form method="post" action="/login">
+        <label for="username">اسم المستخدم:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">كلمة السر:</label>
+        <input type="password" id="password" name="password" required>
+        <label for="role">صلاحية المستخدم:</label>
+        <select id="role" name="role">
+            <option value="عضو">عضو</option>
+            <option value="مدير">مدير</option>
+        </select>
+        <button type="submit">تسجيل الدخول</button>
+    </form>
+</body>
+</html>

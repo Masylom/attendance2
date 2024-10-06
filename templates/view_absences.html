@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>عرض الغياب</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <h1>عرض الغياب</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>كود المدرسة</th>
+                <th>اسم المدرسة</th>
+                <th>التاريخ</th>
+                <th>الصف الأول</th>
+                <th>الصف الثاني</th>
+                <th>الصف الثالث</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for absence in absences %}
+            <tr>
+                <td>{{ absence[0] }}</td>
+                <td>{{ absence[1] }}</td> <!-- عرض اسم المدرسة هنا -->
+                <td>{{ absence[2] }}</td>
+                <td>{{ absence[3] }}</td>
+                <td>{{ absence[4] }}</td>
+                <td>{{ absence[5] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
